@@ -1,0 +1,26 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+repositories {
+   mavenCentral()
+   maven {
+   	   url "https://repository.jboss.org/nexus/content/groups/public/"
+       artifactUrls "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/"
+   }
+
+}
+
+dependencies {
+
+   compileOnly project(':pe.com.edu.siaa.core.be.client')
+   compileOnly project(':pe.com.edu.siaa.core.bp.client')
+   compileOnly project(':pe.com.edu.siaa.core.bp')
+   
+   compileOnly group: 'javax', name: 'javaee-api', version: '7.0'
+   compileOnly group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.4.0'
+   compileOnly group: 'net.sf.jasperreports', name: 'jasperreports-fonts', version: '6.0.0'
+   compileOnly group: 'org.apache.poi', name: 'poi', version: '3.15'
+   compileOnly group: 'commons-io', name: 'commons-io', version: '2.5'
+   compileOnly group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+}
+

@@ -1,0 +1,196 @@
+allprojects {
+    group = 'pe.com.edu.siaa.core'
+    version = '1.0'
+	project.ext {
+	    
+	}
+		
+    repositories { 
+    	mavenCentral() 
+    	maven {
+		        url "https://repository.jboss.org/nexus/content/groups/public/"
+		        artifactUrls "https://mvnrepository.com/artifact/org.bitbucket.b_c/jose4j"
+		        artifactUrls "https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt"
+		        artifactUrls "https://mvnrepository.com/artifact/net.sourceforge.barbecue/barbecue"
+		        artifactUrls "http://central.maven.org/maven2/"
+		        artifactUrls "https://repository.jboss.org/nexus/content/groups/public/"
+		        artifactUrls "http://jasperreports.sourceforge.net/maven2/"
+		        
+		  }
+    }
+	configurations {
+		provided 
+	}
+}
+
+subprojects {  
+    tasks.withType(JavaCompile) { 
+    	options.encoding = "UTF-8" 
+    }
+    configurations {
+        all*.exclude group: 'commons-logging', module: 'commons-logging'
+    }
+}
+
+plugins.withType(EarPlugin) {
+        ear { 
+        	group = "pe.com.edu.siaa.core" 
+        }
+}
+
+plugins.withType(WarPlugin) {
+	war {  
+		jar.enabled = false  
+	}
+}
+
+project(':pe.com.edu.siaa.core.be') {
+	apply plugin: 'java'
+	apply plugin: 'eclipse-wtp'
+	compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+	eclipse {
+            wtp {
+                facet {
+                    facet name: "jst.java", version: "1.8"
+                }
+            }
+    }
+    dependencies {
+        
+    }
+}
+
+project(':pe.com.edu.siaa.core.be.client') {	apply plugin: 'java'
+	apply plugin: 'eclipse-wtp'
+	compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+	eclipse {
+            wtp {
+                facet {
+                    facet name: "jst.java", version: "1.8"
+                }
+            }
+    }    
+    dependencies {
+        
+    }
+}
+
+project(':pe.com.edu.siaa.core.bp') {
+ 	apply plugin: 'java'
+ 	apply plugin: 'eclipse-wtp'
+	compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+	eclipse {
+            wtp {
+                facet {
+                 	facets = []
+                    facet name: "jst.java", type: "fixed"
+                    facet name: "jst.ejb", type: "fixed"
+                    facet name: "jst.java", version: "1.8"
+                    facet name: "jst.ejb", version: "3.2"
+                }
+            }
+    }    
+}
+
+project(':pe.com.edu.siaa.core.bp.client') {
+	apply plugin: 'java'
+	apply plugin: 'eclipse-wtp'
+	compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+	eclipse {
+            wtp {
+                facet {
+                    facet name: "jst.java", version: "1.8"
+                }
+            }
+     }
+    
+}
+
+project(':pe.com.edu.siaa.core.integration') {	apply plugin: 'java'
+	apply plugin: 'eclipse-wtp'
+	compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+	eclipse {
+            wtp {
+                facet {
+                    facet name: "jst.java", version: "1.8"
+                }
+            }
+     }
+}
+
+project(':pe.com.edu.siaa.core.rest'){
+	apply plugin: 'java'
+	apply plugin: 'eclipse-wtp'
+	compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+	eclipse {
+            wtp {
+                facet {
+                 	facets = []
+                    facet name: "jst.java", type: "fixed"
+                    facet name: "jst.ejb", type: "fixed"
+                    facet name: "jst.java", version: "1.8"
+                    facet name: "jst.ejb", version: "3.2"
+                }
+            }
+        }
+}
+
+project(':pe.com.edu.siaa.core.ui.wd') {
+	apply plugin: 'war'
+	apply plugin: "eclipse-wtp"
+	eclipse {
+            wtp {
+                facet {
+                    facets = []
+                    facet name: "java", type: "fixed"
+                    facet name: "jst.web", type: "fixed"
+                    facet name: "wst.jsdt.web", type: "fixed"
+                    facet name: "java", version: "1.8"
+                    facet name: "jst.web", version: "3.1"
+                    facet name: "wst.jsdt.web", version: "1.0"
+                }
+            }
+    }
+	eclipse.wtp.component.contextPath = "apilabe"
+
+}
+
+project(':pe.com.edu.siaa.core.app') {
+	apply plugin: 'ear'
+	apply plugin: 'eclipse-wtp'
+	eclipse {
+            wtp {
+                facet {
+                    facets = []
+                    facet name: "jst.ear", type: "fixed"
+                    facet name: "jst.ear", version: "7.0"
+                }
+                component {
+                    resource sourcePath: "src/main/application", deployPath: "/", tag: "defaultRootSource"
+                }
+            }
+     }
+	
+	dependencies {
+	    
+	}
+	
+}

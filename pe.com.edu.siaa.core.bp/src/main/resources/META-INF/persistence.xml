@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd"
+version="2.1">
+	<persistence-unit name="pe.com.builderp.core.jpa" >
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/siaaDS</jta-data-source>
+		<!-- pago matricula nota admision common -->		 
+				
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaItems</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Item</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Parametro</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaValores</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Ubigeo</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Usuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Entidad</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.TipoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioMenu</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PropertiesLenguaje</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.MenuPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Properties</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Privilegio</class>	 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Menu</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.ConfiguracionMenu</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Sistema</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioGrupoUsuario</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.UsuarioEntidad</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioMenu</class>		
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.RecuperarPassword</class>			 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ScriptSql</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ParametrosScriptSql</class>
+		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Compra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.ContactoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaBancaria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaTipoDocumento</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleOrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.OrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Proveedor</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContable</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContableDet</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfigDependenciaItem</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfiguracionCuenta</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.PlanContable</class>
+		 		
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.TipoDocSunatEntidad</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Caja</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Categoria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Cliente</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributoValue</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetallePedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleVenta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Linea</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Marca</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Modelo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Pedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Producto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Proforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Venta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ProductoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProducto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.GuiaRemision</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Vehiculo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Transportista</class> 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Combo</class>		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Entrega</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleEntrega</class>
+		 
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CategoriaByEmpresa</class> 
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Egreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Ingreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Personal</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Recordatorio</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Asociado</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.AsociadoFamilia</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Puesto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Sector</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Rubro</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CuotaConcepto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetPlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.PlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.ControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetControlPago</class>
+         <class>pe.com.edu.siaa.core.model.jpa.empresa.Anhio</class>
+	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Actividad</class>
+	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Asistencia</class>
+ 		 
+	 
+		 
+		<properties>	    
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect" /> -->
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+		<!--  <property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+		   <!-- <property name="hibernate.hbm2ddl.auto" value="update" />  -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!--<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.WeblogicTransactionManagerLookup" />-->
+			<property name="transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" />
+		 	<!--<property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>-->
+		</properties>	
+	</persistence-unit>	
+	
+	<persistence-unit name="pe.com.builderp.core.academico.jpa" >
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/siaaDS</jta-data-source>
+		<!-- pago matricula nota admision common -->
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaItems</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Item</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Parametro</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaValores</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Ubigeo</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Usuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Entidad</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.TipoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioMenu</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PropertiesLenguaje</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.MenuPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Properties</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Privilegio</class>	 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Menu</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.ConfiguracionMenu</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Sistema</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioGrupoUsuario</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.UsuarioEntidad</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioMenu</class>		
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.RecuperarPassword</class>			 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ScriptSql</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ParametrosScriptSql</class>
+		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Compra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.ContactoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaBancaria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaTipoDocumento</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleOrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.OrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Proveedor</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContable</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContableDet</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfigDependenciaItem</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfiguracionCuenta</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.PlanContable</class>
+		 		
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.TipoDocSunatEntidad</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Caja</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Categoria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Cliente</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributoValue</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetallePedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleVenta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Linea</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Marca</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Modelo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Pedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Producto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Proforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Venta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ProductoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProducto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.GuiaRemision</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Vehiculo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Transportista</class> 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Combo</class>		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Entrega</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleEntrega</class>
+		 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CategoriaByEmpresa</class> 
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Egreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Ingreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Personal</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Recordatorio</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Asociado</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.AsociadoFamilia</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Puesto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Sector</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Rubro</class>
+ 		  <class>pe.com.edu.siaa.core.model.jpa.empresa.CuotaConcepto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetPlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.PlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.ControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Anhio</class>
+ 	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Actividad</class>
+	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Asistencia</class>
+	     
+		<properties>	    
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect" /> -->
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+		<!--  <property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+		   <!-- <property name="hibernate.hbm2ddl.auto" value="update" />  -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!--<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.WeblogicTransactionManagerLookup" />-->
+			<property name="transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" />
+		 	<!--<property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>-->
+		</properties>	
+	</persistence-unit>
+	
+	<persistence-unit name="pe.com.builderp.core.facturacion.jpa" >
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/siaaDS</jta-data-source>
+		<!-- pago matricula nota admision common -->
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaItems</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Item</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Parametro</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaValores</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Ubigeo</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Usuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Entidad</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.TipoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioMenu</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PropertiesLenguaje</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.MenuPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Properties</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Privilegio</class>	 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Menu</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.ConfiguracionMenu</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Sistema</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioGrupoUsuario</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.UsuarioEntidad</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioMenu</class>		
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.RecuperarPassword</class>			 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ScriptSql</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ParametrosScriptSql</class>
+		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Compra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.ContactoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaBancaria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaTipoDocumento</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleOrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.OrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Proveedor</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContable</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContableDet</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfigDependenciaItem</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfiguracionCuenta</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.PlanContable</class>
+		 		
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.TipoDocSunatEntidad</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Caja</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Categoria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Cliente</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributoValue</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetallePedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleVenta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Linea</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Marca</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Modelo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Pedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Producto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Proforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Venta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ProductoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProducto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.GuiaRemision</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Vehiculo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Transportista</class> 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Combo</class>		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Entrega</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleEntrega</class>
+		 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CategoriaByEmpresa</class> 
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Egreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Ingreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Personal</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Recordatorio</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Asociado</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.AsociadoFamilia</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Puesto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Sector</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Rubro</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CuotaConcepto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetPlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.PlanPagos</class>
+ 	     <class>pe.com.edu.siaa.core.model.jpa.empresa.ControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Anhio</class>
+ 	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Actividad</class>
+	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Asistencia</class>
+ 		 
+		<properties>	    
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect" /> -->
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+		<!--  <property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+		   <!-- <property name="hibernate.hbm2ddl.auto" value="update" />  -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!--<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.WeblogicTransactionManagerLookup" />-->
+			<property name="transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" />
+		 	<!--<property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>-->
+		</properties>	
+	</persistence-unit>
+	
+	<persistence-unit name="pe.com.builderp.core.contabilidad.jpa" >
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/siaaDS</jta-data-source>
+		<!-- pago matricula nota admision common -->
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaItems</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Item</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Parametro</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaValores</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Ubigeo</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Usuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Entidad</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.TipoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioMenu</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PropertiesLenguaje</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.MenuPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Properties</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Privilegio</class>	 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Menu</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.ConfiguracionMenu</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Sistema</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioGrupoUsuario</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.UsuarioEntidad</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioMenu</class>		
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.RecuperarPassword</class>			 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ScriptSql</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ParametrosScriptSql</class>
+		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Compra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.ContactoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaBancaria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaTipoDocumento</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleOrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.OrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Proveedor</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContable</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContableDet</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfigDependenciaItem</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfiguracionCuenta</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.PlanContable</class>
+		 		
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.TipoDocSunatEntidad</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Caja</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Categoria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Cliente</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributoValue</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetallePedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleVenta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Linea</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Marca</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Modelo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Pedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Producto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Proforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Venta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ProductoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProducto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.GuiaRemision</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Vehiculo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Transportista</class> 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Combo</class>		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Entrega</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleEntrega</class>
+		 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CategoriaByEmpresa</class> 
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Egreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Ingreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Personal</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Recordatorio</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Asociado</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.AsociadoFamilia</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Puesto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Sector</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Rubro</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CuotaConcepto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetPlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.PlanPagos</class>
+  		 <class>pe.com.edu.siaa.core.model.jpa.empresa.ControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Anhio</class>
+ 	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Actividad</class>
+	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Asistencia</class>
+		 
+		<properties>	    
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect" /> -->
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+		<!--  <property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+		   <!-- <property name="hibernate.hbm2ddl.auto" value="update" />  -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!--<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.WeblogicTransactionManagerLookup" />-->
+			<property name="transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" />
+		 	<!--<property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>-->
+		</properties>	
+	</persistence-unit>
+	
+	
+	<persistence-unit name="pe.com.builderp.core.escalafon.jpa" >
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/siaaDS</jta-data-source>
+		<!-- pago matricula nota admision common -->
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaItems</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Item</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Parametro</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaValores</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Ubigeo</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Usuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Entidad</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.TipoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioMenu</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PropertiesLenguaje</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.MenuPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Properties</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Privilegio</class>	 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Menu</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.ConfiguracionMenu</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Sistema</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioGrupoUsuario</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.UsuarioEntidad</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioMenu</class>		
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.RecuperarPassword</class>			 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ScriptSql</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ParametrosScriptSql</class>
+		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Compra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.ContactoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaBancaria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaTipoDocumento</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleOrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.OrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Proveedor</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContable</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContableDet</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfigDependenciaItem</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfiguracionCuenta</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.PlanContable</class>
+		 		
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.TipoDocSunatEntidad</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Caja</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Categoria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Cliente</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributoValue</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetallePedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleVenta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Linea</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Marca</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Modelo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Pedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Producto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Proforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Venta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ProductoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProducto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.GuiaRemision</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Vehiculo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Transportista</class> 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Combo</class>		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Entrega</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleEntrega</class>
+		 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CategoriaByEmpresa</class> 
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Egreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Ingreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Personal</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Recordatorio</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Asociado</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.AsociadoFamilia</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Puesto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Sector</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Rubro</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CuotaConcepto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetPlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.PlanPagos</class>
+ 	 	 <class>pe.com.edu.siaa.core.model.jpa.empresa.ControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Anhio</class>
+ 	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Actividad</class>
+	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Asistencia</class>
+ 		 
+		<properties>	    
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect" /> -->
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+		<!--  <property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+		   <!-- <property name="hibernate.hbm2ddl.auto" value="update" />  -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!--<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.WeblogicTransactionManagerLookup" />-->
+			<property name="transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" />
+		 	<!--<property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>-->
+		</properties>	
+	</persistence-unit>
+		
+	<persistence-unit name="pe.com.builderp.core.encuesta.jpa" >
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/siaaDS</jta-data-source>
+		<!-- pago matricula nota admision common -->
+		<class>pe.com.edu.siaa.core.model.jpa.common.ListaItems</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Item</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Parametro</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaValores</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Ubigeo</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Usuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Entidad</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.TipoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioMenu</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PropertiesLenguaje</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.MenuPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Properties</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Privilegio</class>	 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Menu</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.ConfiguracionMenu</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Sistema</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioGrupoUsuario</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.UsuarioEntidad</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioMenu</class>		
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.RecuperarPassword</class>			 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ScriptSql</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ParametrosScriptSql</class>
+		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Compra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.ContactoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaBancaria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaTipoDocumento</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleOrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.OrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Proveedor</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContable</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContableDet</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfigDependenciaItem</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfiguracionCuenta</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.PlanContable</class>
+		 		
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.TipoDocSunatEntidad</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Caja</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Categoria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Cliente</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributoValue</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetallePedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleVenta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Linea</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Marca</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Modelo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Pedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Producto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Proforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Venta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ProductoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProducto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.GuiaRemision</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Vehiculo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Transportista</class> 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Combo</class>		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Entrega</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleEntrega</class>
+		 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CategoriaByEmpresa</class> 
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Egreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Ingreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Personal</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Recordatorio</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Asociado</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.AsociadoFamilia</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Puesto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Sector</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Rubro</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CuotaConcepto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetPlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.PlanPagos</class>
+  		 <class>pe.com.edu.siaa.core.model.jpa.empresa.ControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Anhio</class>
+ 	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Actividad</class>
+	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Asistencia</class>
+ 		 
+		<properties>	    
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect" /> -->
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+		<!--  <property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+		   <!-- <property name="hibernate.hbm2ddl.auto" value="update" />  -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!--<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.WeblogicTransactionManagerLookup" />-->
+			<property name="transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" />
+		 	<!--<property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>-->
+		</properties>	
+	</persistence-unit>
+	
+	
+	<persistence-unit name="pe.com.builderp.core.convenio.jpa" >
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/siaaDS</jta-data-source>
+		<!-- pago matricula nota admision common -->
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaItems</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Item</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Parametro</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.ListaValores</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.common.Ubigeo</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Usuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Entidad</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.TipoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuario</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioMenu</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PropertiesLenguaje</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.MenuPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioPersonalizado</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Properties</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Privilegio</class>	 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Menu</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.ConfiguracionMenu</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.Sistema</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.PrivilegioGrupoUsuario</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.UsuarioEntidad</class>	
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.GrupoUsuarioMenu</class>		
+		 <class>pe.com.edu.siaa.core.model.jpa.seguridad.RecuperarPassword</class>			 
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ScriptSql</class>		 
+		 <class>pe.com.edu.siaa.core.model.jpa.reporte.ParametrosScriptSql</class>
+		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Compra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.ContactoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaBancaria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.CuentaTipoDocumento</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.DetalleOrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.OrdenCompra</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.compra.Proveedor</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContable</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.AsientoContableDet</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfigDependenciaItem</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.ConfiguracionCuenta</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.contabilidad.PlanContable</class>
+		 		
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.TipoDocSunatEntidad</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Caja</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Categoria</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Cliente</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ConfiguracionAtributoValue</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetallePedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleVenta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Linea</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Marca</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Modelo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Pedido</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Producto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Proforma</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Venta</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.ProductoProveedor</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleProducto</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.GuiaRemision</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Vehiculo</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Transportista</class> 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Combo</class>		 
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.Entrega</class>
+		 <class>pe.com.builderp.core.facturacion.model.jpa.venta.DetalleEntrega</class>
+		 
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CategoriaByEmpresa</class> 
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Egreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Ingreso</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Personal</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Recordatorio</class>
+		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Asociado</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.AsociadoFamilia</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Puesto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Sector</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Rubro</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.CuotaConcepto</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetPlanPagos</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.PlanPagos</class>
+  		 <class>pe.com.edu.siaa.core.model.jpa.empresa.ControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.DetControlPago</class>
+ 		 <class>pe.com.edu.siaa.core.model.jpa.empresa.Anhio</class>
+ 	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Actividad</class>
+	     <class>pe.com.edu.siaa.core.model.jpa.empresa.Asistencia</class>
+ 		 
+		<properties>	    
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect" /> -->
+		<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+		<!--  <property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+		   <!-- <property name="hibernate.hbm2ddl.auto" value="update" />  -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!--<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.WeblogicTransactionManagerLookup" />-->
+			<property name="transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" />
+		 	<!--<property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>-->
+		</properties>	
+	</persistence-unit>
+		
+</persistence>

@@ -1,0 +1,23 @@
+package pe.com.edu.siaa.core.ejb.util.motor.regla
+expander say_something.dsl
+
+rule "Rocky Balboa Says"
+    when
+        If there is a Person with name of "Rocky Balboa" 
+        And Person is at least 30 years old and lives in "Philadelphia" 
+    then
+        Say mmm "Yo, Adrian!"
+end 
+
+rule "Natan Balboa Says"
+    when
+        If there is a Person with name of "Natan Balboa" 
+        And Person is at least 20 years old and lives in "Philadelphia" 
+    then
+        Say mmm "Yo, Natan!"
+end 
+
+
+query "Get all Messages" 
+    get All Messages
+end 

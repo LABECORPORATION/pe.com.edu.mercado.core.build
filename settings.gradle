@@ -1,0 +1,6 @@
+include 'pe.com.edu.siaa.core.be.client','pe.com.edu.siaa.core.be'
+include 'pe.com.edu.siaa.core.bp.client','pe.com.edu.siaa.core.bp'
+include 'pe.com.edu.siaa.core.integration','pe.com.edu.siaa.core.rest'
+include 'pe.com.edu.siaa.core.ui.wd','pe.com.edu.siaa.core.app'
+
+rootProject.name = 'pe.com.edu.mercado.core.build'

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="2.0">
+	<wb-module deploy-name="pe.com.edu.siaa.core.app">
+		<wb-resource deploy-path="/" source-path="src/main/application"/>
+		<dependent-module deploy-path="/" handle="module:/resource/pe.com.edu.siaa.core.bp/pe.com.edu.siaa.core.bp">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/" handle="module:/resource/pe.com.edu.siaa.core.rest/pe.com.edu.siaa.core.rest">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/" handle="module:/resource/pe.com.edu.siaa.core.ui.wd/pe.com.edu.siaa.core.ui.wd">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/resource/pe.com.edu.siaa.core.be/pe.com.edu.siaa.core.be">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/resource/pe.com.edu.siaa.core.be.client/pe.com.edu.siaa.core.be.client">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/resource/pe.com.edu.siaa.core.bp.client/pe.com.edu.siaa.core.bp.client">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/resource/pe.com.edu.siaa.core.integration/pe.com.edu.siaa.core.integration">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.docx4j/docx4j/3.2.2/b78e293fb70fefa6ea4ee6e84385a989695e4224/docx4j-3.2.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.5/6edffc576ce104ec769d954618764f39f0f0f10d/slf4j-log4j12-1.7.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.jxls/jxls-jexcel/1.0.6/ef2a26b6adfe82fbbb8d603e6e2c8e575c266850/jxls-jexcel-1.0.6.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/net.sourceforge.jexcelapi/jxl/2.6.10/a5447936214d5116a4ad8d90764ed72c2974b2dc/jxl-2.6.10.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/log4j/log4j/1.2.17/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/fop/1.1/95978100a6cde324078947a2d476cf2f207a7e5a/fop-1.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/xmlgraphics-commons/1.5/7fb5c2b2c18f0e87fbe9bded16429a5d7cc2dc2b/xmlgraphics-commons-1.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-io/commons-io/2.2/83b5b8a7ba1c08f9e8c8ff2373724e33d3c1e22a/commons-io-2.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/net.sf.jasperreports/jasperreports/6.5.1/5dc46ee540e508bead23b290a18015cb20df2fc5/jasperreports-6.5.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.codehaus.castor/castor-xml/1.3.3/1072663e1b7463f6452eba51749bec5526f4883d/castor-xml-1.3.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.codehaus.castor/castor-core/1.3.3/2fbb4a27b840e116526a1189dbe53307551ecfb4/castor-core-1.3.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-lang/commons-lang/2.6/ce1edb914c94ebc388f086c6827e8bdeec71ac2/commons-lang-2.6.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.drools/drools-compiler/6.4.0.Final/8e463281804c41754f5bcad687ecbe0b9c408d7c/drools-compiler-6.4.0.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.4.2/71d67f5bab9465ec844596ef844f40902ae25392/ecj-4.4.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.freemarker/freemarker-gae/2.3.23/47a2ddc71db4807d955ff8ba9ff68dde30f83cbe/freemarker-gae-2.3.23.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/net.sf.jasperreports/jasperreports-fonts/6.0.0/9f58a664e2a54ff80727fa9784aaac7140318c35/jasperreports-fonts-6.0.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/net.sourceforge.barbecue/barbecue/1.5-beta1/946380ea816fbc93cb591562af43997ded5c0a70/barbecue-1.5-beta1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.jxls/jxls-poi/1.0.14/6e244e892e46d24b292e50dad838413ccd121419/jxls-poi-1.0.14.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.jxls/jxls-reader/2.0.3/e17c26da12f3cc451fb67e9d3ad61f923f48ee64/jxls-reader-2.0.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.poi/poi-scratchpad/3.8/33ef3eb7bd97c0dcdf2873b0e0a0938f013d410c/poi-scratchpad-3.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/3.17/7d8c44407178b73246462842bf1e206e99c8e0a/poi-ooxml-3.17.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.poi/poi/3.17/ae92292a2043888b40d418da97dc0b669fde326/poi-3.17.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.reflections/reflections/0.9.9-RC1/b78b545f452a6b7d4fab2641dd0b0147a0f4fd5e/reflections-0.9.9-RC1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-net/commons-net/3.3/cd0d5510908225f76c5fe5a3f1df4fa44866f81e/commons-net-3.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.drools/drools-core/6.4.0.Final/7fcc9d0fe3bfcd517aab6dca805f48dcfdbe73e5/drools-core-6.4.0.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-discovery/commons-discovery/0.4/9e3417d3866d9f71e83b959b229b35dc723c7bea/commons-discovery-0.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.pdfbox/pdfbox/2.0.1/dbc69649118b7eff278f228c070a40ee559e1f62/pdfbox-2.0.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-digester/commons-digester/2.1/73a8001e7a54a255eef0f03521ec1805dc738ca0/commons-digester-2.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.commons/commons-jexl/2.1.1/6ecc181debade00230aa1e17666c4ea0371beaaa/commons-jexl-2.1.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.commons/commons-digester3/3.2/681147de1c9c99247feea8fc467ad7255430d949/commons-digester3-3.2-with-deps.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.pdfbox/fontbox/2.0.1/b9d4f0993e015f3f1ce0be9e7300cf62dd7a7f15/fontbox-2.0.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.jxls/jxls/2.10.0/5a11cc83de688716e290a839824dcad7eda74d13/jxls-2.10.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.commons/commons-jexl3/3.1/a905d9655c30a9b7cfd1d11473b059c72283c888/commons-jexl3-3.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.4/d52b9abcd97f38c81342bb7e7ae1eee9b73cba51/commons-beanutils-1.9.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/wsdl4j/wsdl4j/1.6.2/dec1669fb6801b7328e01ad72fc9e10b69ea06c1/wsdl4j-1.6.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.socket/socket.io-client/1.0.0/28dde99672ed62a85e85a7df096c6bec698785b4/socket.io-client-1.0.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.corundumstudio.socketio/netty-socketio/1.7.12/ef6021cb3cb3b30eca03b570ce287fc684aed276/netty-socketio-1.7.12.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.6.3/5bf092aa7be6fe8894d11f8d2040a2b3b401a14/jose4j-0.6.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/net.sf.barcode4j/barcode4j/2.0/68c9e295cdcf030e2681339c1c6ecf73476e4ec2/barcode4j-2.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/f645ed69d595b24d4cf8b3fbb64cc505bede8829/gson-2.8.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-transcoder/1.7/aa2eb6300cb50bbb9dbf52daf7d625aa0df1d930/batik-transcoder-1.7.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-extension/1.7/8e810d9ce0499beca541e3b1a144557cf06f8b19/batik-extension-1.7.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-bridge/1.8/4ab4110b0ed4650ef50d4a344f0ca5c027f3283a/batik-bridge-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/postgresql/postgresql/9.0-801.jdbc4/153f2f92a786f12fc111d0111f709012df87c808/postgresql-9.0-801.jdbc4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.lowagie/itext/2.1.7.js6/6d16b69482c32d7ecf6fd513749db6f04c97ec8/itext-2.1.7.js6.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.jfree/jfreechart/1.0.19/ba9ee7dbb2e4c57a6901c79f614ed2dea9cc0e20/jfreechart-1.0.19.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.jfree/jcommon/1.0.23/a316f336ca996e0c6bec4e4fbd49be8f5e1c3968/jcommon-1.0.23.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.7.4/1e9c6f3659644aeac84872c3b62d8e363bf4c96d/jackson-databind-2.7.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.7.4/b8f38a249116b66d804a5ca2b14a3459b7913a94/jackson-core-2.7.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.7.0/19f42c154ffc689f40a77613bc32caeb17d744e3/jackson-annotations-2.7.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.lucene/lucene-analyzers-common/4.5.1/ef6c6328e6095c91647126af88cf034ab235a6ed/lucene-analyzers-common-4.5.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.lucene/lucene-queryparser/4.5.1/63f46dc7577d676e7d8e5c63891c737297a9a61c/lucene-queryparser-4.5.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.lucene/lucene-queries/4.5.1/62f829859c8bc2df6239cf4c1d8f96ed46b5e541/lucene-queries-4.5.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.lucene/lucene-sandbox/4.5.1/4b038e148cac043176ecacdb34078a9ee07bd957/lucene-sandbox-4.5.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/4.5.1/9a3a0258f668213f873891bec16ca4489281329e/lucene-core-4.5.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.olap4j/olap4j/0.9.7.309-JS-3/b959e1e72a5ab17668609edb2949b09a6a51b82e/olap4j-0.9.7.309-JS-3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.ibm.icu/icu4j/57.1/198ea005f41219f038f4291f0b0e9f3259730e92/icu4j-57.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.1/a4cf4688fe1c7e3a63aa636cc96d013af537768e/commons-collections4-4.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml-schemas/3.17/890114bfa82f5b6380ea0e9b0bf49b0af797b414/poi-ooxml-schemas-3.17.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.04/3386abf821719bc89c7685f9eaafaf4a842f0199/curvesapi-1.04.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.google.guava/guava/17.0/9c6ef172e8de35fd8d4d8783e4821e57cdef7445/guava-17.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.javassist/javassist/3.16.1-GA/315891b371395271977af518d4db5cee1a0bc9bf/javassist-3.16.1-GA.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.plutext/jaxb-svg11/1.0.2/3c0cd54d5691f5b5f8c60ed0c06353ff1db424e1/jaxb-svg11-1.0.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.plutext/jaxb-xslfo/1.0.1/85441209652b216f61160445b399f5bc97e370c6/jaxb-xslfo-1.0.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.plutext/jaxb-xmldsig-core/1.0.0/57514aa2f72111cfbc0a532ce88782735370e1e5/jaxb-xmldsig-core-1.0.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/net.engio/mbassador/1.1.10/ca527ef1806b999b1efdc54ad62ec4984c59fefe/mbassador-1.1.10.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.kie/kie-internal/6.4.0.Final/6cd1bfbf9c106b3ff473ca0292bcba5e387a3fca/kie-internal-6.4.0.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.kie/kie-api/6.4.0.Final/3a27cdd03ace383dc3e445b8ac622064eb8308ee/kie-api-6.4.0.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.30/cd92524ea19d27e5b94ecd251e1af729cffdfe15/jcl-over-slf4j-1.7.30.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.avalon.framework/avalon-framework-impl/4.3.1/2d5f5a07fd14513ce6d7a7bfaff69419c26dbd0b/avalon-framework-impl-4.3.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.avalon.framework/avalon-framework-api/4.3.1/2dacadeb49bc14420990b1f28897d46f96e2181d/avalon-framework-api-4.3.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-script/1.8/5bda6a9d45065b184c83c46b64d8002b4e0ab7c7/batik-script-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-anim/1.8/68197dfa3643a906ba250025a03dc42e6efe2dec/batik-anim-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-svg-dom/1.8/97c9d00d08c849066d2359b0f1124f0e82b952c2/batik-svg-dom-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-dom/1.8/4e696cf01cee52e8c4f86c842b5d8314e689209c/batik-dom-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/xalan/xalan/2.7.1/75f1d83ce27bab5f29fff034fc74aa9f7266f22a/xalan-2.7.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/net.arnx/wmf2svg/0.9.0/7b27809b43acb48c1ca65d68219256192a5a887b/wmf2svg-0.9.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.antlr/antlr-runtime/3.5/baa82bff19059401e90e1b90020beb9c96305d7/antlr-runtime-3.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.antlr/stringtemplate/3.2.1/59ec8083721eae215c6f3caee944c410d2be34de/stringtemplate-3.2.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.mvel/mvel2/2.2.8.Final/a0d38dc2422594621b71604f91255af1001114c0/mvel2-2.2.8.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.thoughtworks.xstream/xstream/1.4.7/bce3282142b63068260f021fcbe48b72e8d71a1a/xstream-1.4.7.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/2.6.0/88ba32feefe385d5dc284b71f649201eabd15778/protobuf-java-2.6.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.socket/engine.io-client/1.0.0/45fc6115750f06a9cd5dd71632cb7fc052cd66de/engine.io-client-1.0.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.json/json/20090211/c183aa3a2a6250293808bba12262c8920ce5a51c/json-20090211.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.5.Final/6262900ee9487e62560030a136160df953b1cd6b/netty-handler-4.1.5.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.5.Final/87bda1b9ec7e3f75ca721fc87735cbedad2aa1a/netty-codec-http-4.1.5.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.5.Final/66bbf9324fa36467d041083f89328e2a24ec4f67/netty-codec-4.1.5.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.5.Final/fa367ea8a375f236f4adeef1ac769d2d91dde1d1/netty-transport-native-epoll-4.1.5.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.5.Final/37126b370722ff9631ee13c91139aacec0a71d1d/netty-transport-4.1.5.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.5.Final/b5fb6bccda4d63d4a74c9faccdf32f77ab66abc1/netty-buffer-4.1.5.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.5.Final/5f367bedcdc185a727fda3296b9a18014cdc22c4/netty-resolver-4.1.5.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/io.netty/netty-common/4.1.5.Final/607f8433d8782445e72abe34e43a7e57e86a5e6c/netty-common-4.1.5.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.2.3/864344400c3d4d92dfeb0a305dc87d953677c03c/logback-core-1.2.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/avalon-framework/avalon-framework-impl/4.2.0/4da1db18947eb6950abb7ad79253011b9aec0e48/avalon-framework-impl-4.2.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/xalan/serializer/2.7.1/4b4b18df434451249bb65a63f2fb69e215a6a020/serializer-2.7.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-css/1.8/2b3f22cc65702a0821b7f0178d055282a1cdde59/batik-css-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-ext/1.8/8713f3238cfac337624a90c3ad7d45d7bc6fb1b5/batik-ext-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-parser/1.8/7e4e69a4aa5317861864db93da5f246214750484/batik-parser-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/xml-apis/xml-apis/1.3.04/90b215f48fe42776c8c7f6e3509ec54e84fd65ef/xml-apis-1.3.04.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-svggen/1.7/baa58d0f5bfd2a28142e222cee126eb71bd0a938/batik-svggen-1.7.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-gvt/1.8/fbde4cd3c43001c162446cf43093d09fda346e11/batik-gvt-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-awt-util/1.8/5cd7f97060cdfab0139e70504962d48ceee71ef2/batik-awt-util-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-xml/1.8/9bf0ee759fed1e3a2e4ad41819eac69ff4873732/batik-xml-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlgraphics/batik-util/1.8/35dcd204f397d6976290ca48ffa0011ba9b7ef43/batik-util-1.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/xml-apis/xml-apis-ext/1.3.04/41a8b86b358e87f3f13cf46069721719105aff66/xml-apis-ext-1.3.04.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/stax/stax/1.2.0/c434800de5e4bbe1822805be5fb1c32d6834f830/stax-1.2.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/javax.xml.stream/stax-api/1.0-2/d6337b0de8b25e53e81b922352fbea9f9f57ba0b/stax-api-1.0-2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/xmlpull/xmlpull/1.1.3.1/2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa/xmlpull-1.1.3.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/xpp3/xpp3_min/1.1.4c/19d4e90b43059058f6e056f794f0ea4030d60b86/xpp3_min-1.1.4c.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.1/4d060ca3190df0eda4dc13415532a12e15ca5f11/okhttp-3.8.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/cglib/cglib/2.2.2/a47a971686474124562bdd4a7ccbd8ac8c3e8b11/cglib-2.2.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/2.6.0/29e80d2dd51f9dcdef8f9ffaee0d4dc1c9bbfc87/xmlbeans-2.6.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/stax/stax-api/1.0.1/49c100caf72d658aca8e58bd74a4ba90fa2b0d70/stax-api-1.0.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/jakarta-regexp/jakarta-regexp/1.4/ea514a179ac1dd7e81c7e6594468b9b9910d298/jakarta-regexp-1.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/classpath/lib/D:/sw/builder/gradle-4.0.1/caches/modules-2/files-2.1/asm/asm/3.3.1/1d5f20b4ea675e6fab6ab79f1cd60ec268ddc015/asm-3.3.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>

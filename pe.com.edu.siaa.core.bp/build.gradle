@@ -1,0 +1,56 @@
+apply plugin: 'java'
+
+repositories {
+     mavenCentral() 
+     maven {
+		        url "https://repository.jboss.org/nexus/content/groups/public/"
+		        artifactUrls "https://mvnrepository.com/artifact/org.bitbucket.b_c/jose4j"
+		        artifactUrls "https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt"
+		        artifactUrls "https://mvnrepository.com/artifact/net.sourceforge.barbecue/barbecue"
+		        artifactUrls "http://central.maven.org/maven2/"
+		        artifactUrls "https://repository.jboss.org/nexus/content/groups/public/"
+		        artifactUrls "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/"
+		        artifactUrls "https://clojars.org/repo/"
+	 }
+}
+
+dependencies {    
+    compile project(':pe.com.edu.siaa.core.be.client')
+    compile project(':pe.com.edu.siaa.core.be')
+    compile project(':pe.com.edu.siaa.core.bp.client')
+    compile project(':pe.com.edu.siaa.core.integration')
+    
+    
+    compileOnly group: 'javax', name: 'javaee-api', version: '7.0'
+    compileOnly group: 'log4j', name: 'log4j', version: '1.2.16'
+    compileOnly group: 'org.hibernate', name: 'hibernate-core', version: '4.0.1.Final'
+    
+    compile group: 'org.eclipse.jdt.core.compiler', name: 'ecj', version: '3.7.2'
+    compile group: 'org.freemarker', name: 'freemarker-gae', version: '2.3.23'
+    
+    
+    compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.5.1'
+    compile group: 'net.sf.jasperreports', name: 'jasperreports-fonts', version: '6.0.0'
+    
+    compile group: 'net.sourceforge.barbecue', name: 'barbecue', version: '1.5-beta1'
+    compile group: 'org.apache.poi', name: 'poi', version: '3.17'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.9-RC1'
+    compile group: 'commons-net', name: 'commons-net', version: '3.3'
+    compile group: 'org.docx4j', name: 'docx4j', version: '3.2.2'
+    compile group: 'org.drools', name: 'drools-core', version: '6.4.0.Final'
+    compile group: 'org.drools', name: 'drools-compiler', version: '6.4.0.Final'  
+    
+	compile group: 'org.jxls', name: 'jxls', version: '2.4.3'
+	compile group: 'org.jxls', name: 'jxls-poi', version: '1.0.14'
+	compile group: 'org.jxls', name: 'jxls-jexcel', version: '1.0.6'
+	compile group: 'org.jxls', name: 'jxls-reader', version: '2.0.3'
+    
+      // https://mvnrepository.com/artifact/org.bitbucket.b_c/jose4j
+	 compile group: 'org.bitbucket.b_c', name: 'jose4j', version: '0.6.3'
+     compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.1'
+     //compile group: 'com.auth0', name: 'java-jwt', version: '3.3.0'   
+     //compile group : 'com.auth0',name: 'jwks-rsa', version: '0.3.0'
+  
+}
+

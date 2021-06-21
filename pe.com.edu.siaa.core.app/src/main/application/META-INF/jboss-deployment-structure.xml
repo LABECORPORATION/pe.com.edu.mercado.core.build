@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+  <deployment>
+    
+    <exclude-subsystems>
+        <subsystem name="logging" />
+    </exclude-subsystems>
+    
+    
+     <exclusions>  
+        <module name="javax.faces.api" slot="1.2" />  
+        <module name="com.sun.jsf-impl" slot="1.2" />  
+        <module name="org.oracle" slot="main" />          
+    </exclusions>  
+    <dependencies>
+	     <module name="com.sun.xml.bind" />	   
+    </dependencies> 
+  </deployment>     
+</jboss-deployment-structure>

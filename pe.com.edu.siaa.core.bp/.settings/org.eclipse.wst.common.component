@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="2.0">
+	<wb-module deploy-name="pe.com.edu.siaa.core.bp">
+		<wb-resource deploy-path="/" source-path="src/main/resources"/>
+		<wb-resource deploy-path="/" source-path="src/main/java"/>
+		<dependent-module deploy-path="../" handle="module:/resource/pe.com.edu.siaa.core.be.client/pe.com.edu.siaa.core.be.client">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="../" handle="module:/resource/pe.com.edu.siaa.core.be/pe.com.edu.siaa.core.be">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="../" handle="module:/resource/pe.com.edu.siaa.core.bp.client/pe.com.edu.siaa.core.bp.client">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="../" handle="module:/resource/pe.com.edu.siaa.core.integration/pe.com.edu.siaa.core.integration">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>

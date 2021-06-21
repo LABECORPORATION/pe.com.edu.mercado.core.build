@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+repositories {
+	mavenCentral()
+}
+
+configurations {
+
+}
+
+dependencies {
+    compileOnly group: 'javax', name: 'javaee-api', version: '7.0'
+}
+
