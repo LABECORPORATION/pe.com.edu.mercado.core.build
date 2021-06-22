@@ -1048,6 +1048,27 @@ public class EmpresaServiceImpl implements EmpresaServiceLocal{
 			if (conceptoPagoDTO.isCheck()) {
 				DetControlPago detControlPago = new DetControlPago();
 				detControlPago.setControlPago(controlPagoPersist);
+				
+				DetPlanPagos detPlanPagosTem = detPlanPagosDaoImpl.find(DetPlanPagos.class, conceptoPagoDTO.getId().toString());
+				if(!StringUtils.isNotNullOrBlank(detPlanPagosTem.getIdDetPlanPagos())) {
+					 List<DetPlanPagosDTO> planPagosDetPlanPagosList = new ArrayList<DetPlanPagosDTO>();
+					 DetPlanPagosDTO detPlanPagosTemp = new DetPlanPagosDTO();
+					 detPlanPagosTemp.setCuotaConcepto(new CuotaConceptoDTO());
+					 detPlanPagosTemp.getCuotaConcepto().setIdCuotaConcepto(conceptoPagoDTO.getIdCuotaConcepto());
+					 detPlanPagosTemp.setCuota(conceptoPagoDTO.getMontoResta());
+					 detPlanPagosTemp.setFechaVencimiento(FechaUtil.obtenerFecha());
+					 detPlanPagosTemp.setFlagFraccionado("N");
+					 detPlanPagosTemp.setIdPuesto(obj.getIdPuesto());
+					 planPagosDetPlanPagosList.add(detPlanPagosTemp);
+					 
+					 planPagosTemp.setAsociado(new AsociadoDTO());
+					 planPagosTemp.getAsociado().setIdAsociado(obj.getAsociado().getIdAsociado());
+					 planPagosTemp.setFechaCreacion(FechaUtil.obtenerFecha());
+					 planPagosTemp.setAuthToken(userName);
+					 planPagosTemp.setAnio(anioDTO);
+					 planPagosTemp.setPlanPagosDetPlanPagosList(planPagosDetPlanPagosList);
+					 registrarPlanPagos(planPagosTemp);
+				}
 				if (conceptoPagoDTO.isEsFraccionado()) {
 					BigDecimal montoPago = conceptoPagoDTO.getMontoTotal().subtract(conceptoPagoDTO.getMontoResta());
 					if (montoPagoFraccionadoMap.containsKey(conceptoPagoDTO.getIdPadre())) {
