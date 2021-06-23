@@ -1051,6 +1051,9 @@ public class EmpresaServiceImpl implements EmpresaServiceLocal{
 				
 				DetPlanPagos detPlanPagosTem = detPlanPagosDaoImpl.find(DetPlanPagos.class, conceptoPagoDTO.getId().toString());
 				if(!StringUtils.isNotNullOrBlank(detPlanPagosTem.getIdDetPlanPagos())) {
+					EstadoAnhoSemestreState estadoAnhoSemestreState = EstadoAnhoSemestreState.get(EstadoGeneralState.ACTIVO.getKey());
+					AnhioDTO anioDTO = obtenerAnhioByEstado(estadoAnhoSemestreState);
+					
 					 List<DetPlanPagosDTO> planPagosDetPlanPagosList = new ArrayList<DetPlanPagosDTO>();
 					 DetPlanPagosDTO detPlanPagosTemp = new DetPlanPagosDTO();
 					 detPlanPagosTemp.setCuotaConcepto(new CuotaConceptoDTO());
@@ -1058,11 +1061,12 @@ public class EmpresaServiceImpl implements EmpresaServiceLocal{
 					 detPlanPagosTemp.setCuota(conceptoPagoDTO.getMontoResta());
 					 detPlanPagosTemp.setFechaVencimiento(FechaUtil.obtenerFecha());
 					 detPlanPagosTemp.setFlagFraccionado("N");
-					 detPlanPagosTemp.setIdPuesto(obj.getIdPuesto());
+					// detPlanPagosTemp.setIdPuesto(obj.getIdPuesto());
 					 planPagosDetPlanPagosList.add(detPlanPagosTemp);
 					 
+					 PlanPagosDTO planPagosTemp = new PlanPagosDTO();
 					 planPagosTemp.setAsociado(new AsociadoDTO());
-					 planPagosTemp.getAsociado().setIdAsociado(obj.getAsociado().getIdAsociado());
+					 planPagosTemp.getAsociado().setIdAsociado(controlPago.getAsociado().getIdAsociado());
 					 planPagosTemp.setFechaCreacion(FechaUtil.obtenerFecha());
 					 planPagosTemp.setAuthToken(userName);
 					 planPagosTemp.setAnio(anioDTO);
