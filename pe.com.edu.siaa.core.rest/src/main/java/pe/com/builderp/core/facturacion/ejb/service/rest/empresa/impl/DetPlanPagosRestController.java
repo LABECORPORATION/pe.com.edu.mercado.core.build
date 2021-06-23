@@ -133,6 +133,7 @@ public class DetPlanPagosRestController extends GenericServiceRestImpl {
 				if(!StringUtils.isNullOrEmpty(conceptoClientePago.getIdPuesto()) ){
 					PuestoDTO puesto = empresaServiceLocal.optenerByPuesto(conceptoClientePago.getIdPuesto());
 					conceptoPagoDTO.setDescripcion(puesto.getDescripcion()+"-"+puesto.getCodigo()+"  "+ conceptoClientePago.getCuotaConcepto().getCuenta() + " " + conceptoClientePago.getNro() + " - (" + conceptoClientePago.getCuotaConcepto().getIdCuotaConcepto()  + ")" );
+					conceptoPagoDTO.setPuesto(puesto);
 				}else {
 					conceptoPagoDTO.setDescripcion(conceptoClientePago.getCuotaConcepto().getCuenta() + " " + conceptoClientePago.getNro() + " - (" + conceptoClientePago.getCuotaConcepto().getIdCuotaConcepto()  + ")" );
 				}
@@ -148,7 +149,7 @@ public class DetPlanPagosRestController extends GenericServiceRestImpl {
 				conceptoPagoDTO.setEsFraccionado(false);
 				if (conceptoClientePago.getFechaVencimiento() != null) {
 					conceptoPagoDTO.setNumeroDiasRetrazo(FechaDateUtil.restaFechas(conceptoClientePago.getFechaVencimiento(), FechaUtil.obtenerFecha()));
-				}
+				} 
 				listaConceptoPagoDTO.add(conceptoPagoDTO);
 			} else if (conceptoClientePago.getFlagFraccionado().equals(FlagConceptoPagoFraccionadoType.SI.getKey())) {
 				ConceptoPagoDTO conceptoPagoDTO = new ConceptoPagoDTO();
@@ -160,6 +161,7 @@ public class DetPlanPagosRestController extends GenericServiceRestImpl {
 				if(!StringUtils.isNullOrEmpty(conceptoClientePago.getIdPuesto()) ){
 					PuestoDTO puesto = empresaServiceLocal.optenerByPuesto(conceptoClientePago.getIdPuesto());
 				    conceptoPagoDTO.setDescripcion(puesto.getDescripcion()+"-"+puesto.getCodigo()+"  "+ conceptoClientePago.getCuotaConcepto().getCuenta() + " " + conceptoClientePago.getNro() + " - (" + conceptoClientePago.getCuotaConcepto().getIdCuotaConcepto()  + ")" );
+					conceptoPagoDTO.setPuesto(puesto);
 				}else {
 				   conceptoPagoDTO.setDescripcion(conceptoClientePago.getCuotaConcepto().getCuenta() + " " + conceptoClientePago.getNro() + " - (" + conceptoClientePago.getCuotaConcepto().getIdCuotaConcepto()  + ")" );
 				}

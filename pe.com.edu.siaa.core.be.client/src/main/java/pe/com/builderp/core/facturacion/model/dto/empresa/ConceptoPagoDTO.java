@@ -70,6 +70,8 @@ public class ConceptoPagoDTO  extends BasePaginator implements Serializable {
 	
 	private String idPlanContable = "";
 	
+	private PuestoDTO puesto;
+	
 	private boolean flagAplicaIGV = false;
 	/**
 	 * Instancia un nuevo concepto pago dto.
@@ -118,12 +120,10 @@ public class ConceptoPagoDTO  extends BasePaginator implements Serializable {
 	}
 
 
-
-
-
-
 		//get y set
 	
+ 
+
 	/**
 	 * Obtiene id padre.
 	 *
@@ -132,6 +132,16 @@ public class ConceptoPagoDTO  extends BasePaginator implements Serializable {
 	public String getIdPadre() {
 		return idPadre;
 	}
+
+	public PuestoDTO getPuesto() {
+		return puesto;
+	}
+
+
+	public void setPuesto(PuestoDTO puesto) {
+		this.puesto = puesto;
+	}
+
 
 	/**
 	 * Establece el id padre.

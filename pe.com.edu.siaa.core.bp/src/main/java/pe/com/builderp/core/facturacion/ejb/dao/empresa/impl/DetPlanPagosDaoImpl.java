@@ -132,7 +132,7 @@ public class DetPlanPagosDaoImpl extends  GenericFacturacionDAOImpl<String, DetP
 			parametros.put("idCuotaconcepto", idCuotaconcepto);
 		} 
  
-		jpaql.append(" order by  detPlanPagos.planPagos.idPlanPagos");
+		jpaql.append(" order by   detPlanPagos.fechaVencimiento desc");
 		Query query = this.createQuery(jpaql.toString(),parametros);
 		resultado = query.getResultList();
 		return resultado;

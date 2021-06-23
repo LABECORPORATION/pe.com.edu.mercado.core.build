@@ -1050,7 +1050,7 @@ public class EmpresaServiceImpl implements EmpresaServiceLocal{
 				detControlPago.setControlPago(controlPagoPersist);
 				
 				DetPlanPagos detPlanPagosTem = detPlanPagosDaoImpl.find(DetPlanPagos.class, conceptoPagoDTO.getId().toString());
-				if(!StringUtils.isNotNullOrBlank(detPlanPagosTem.getIdDetPlanPagos())) {
+				if(StringUtils.isNullOrEmpty(detPlanPagosTem)) {
 					EstadoAnhoSemestreState estadoAnhoSemestreState = EstadoAnhoSemestreState.get(EstadoGeneralState.ACTIVO.getKey());
 					AnhioDTO anioDTO = obtenerAnhioByEstado(estadoAnhoSemestreState);
 					
@@ -1058,18 +1058,23 @@ public class EmpresaServiceImpl implements EmpresaServiceLocal{
 					 DetPlanPagosDTO detPlanPagosTemp = new DetPlanPagosDTO();
 					 detPlanPagosTemp.setCuotaConcepto(new CuotaConceptoDTO());
 					 detPlanPagosTemp.getCuotaConcepto().setIdCuotaConcepto(conceptoPagoDTO.getIdCuotaConcepto());
-					 detPlanPagosTemp.setCuota(conceptoPagoDTO.getMontoResta());
-					 detPlanPagosTemp.setFechaVencimiento(FechaUtil.obtenerFecha());
+					 detPlanPagosTemp.setCuota(conceptoPagoDTO.getMonto()); 
+					 detPlanPagosTemp.setMontoResta(conceptoPagoDTO.getMontoResta());
+					 detPlanPagosTemp.setFechaVencimiento(conceptoPagoDTO.getFechaVencimiento());
 					 detPlanPagosTemp.setFlagFraccionado("N");
-					// detPlanPagosTemp.setIdPuesto(obj.getIdPuesto());
+					 detPlanPagosTemp.setIdPuesto(conceptoPagoDTO.getPuesto().getIdPuesto());
 					 planPagosDetPlanPagosList.add(detPlanPagosTemp);
 					 
-					 PlanPagosDTO planPagosTemp = new PlanPagosDTO();
-					 planPagosTemp.setAsociado(new AsociadoDTO());
+					 PlanPagosDTO planPagos=new PlanPagosDTO();
+					 planPagos.setAsociado(controlPago.getAsociado());
+					 planPagos.setAnio(anioDTO);
+					 planPagos.setIdFiltro1(anioDTO);
+					 PlanPagosDTO planPagosTemp = findByPlanPagos(planPagos);
+					 /*planPagosTemp.setAsociado(new AsociadoDTO());
 					 planPagosTemp.getAsociado().setIdAsociado(controlPago.getAsociado().getIdAsociado());
 					 planPagosTemp.setFechaCreacion(FechaUtil.obtenerFecha());
-					 planPagosTemp.setAuthToken(userName);
-					 planPagosTemp.setAnio(anioDTO);
+					 planPagosTemp.setAuthToken(userName); 
+					 planPagosTemp.setAnio(anioDTO);*/
 					 planPagosTemp.setPlanPagosDetPlanPagosList(planPagosDetPlanPagosList);
 					 registrarPlanPagos(planPagosTemp);
 				}
