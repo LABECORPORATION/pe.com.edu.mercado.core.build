@@ -1070,11 +1070,15 @@ public class EmpresaServiceImpl implements EmpresaServiceLocal{
 					 planPagos.setAnio(anioDTO);
 					 planPagos.setIdFiltro1(anioDTO);
 					 PlanPagosDTO planPagosTemp = findByPlanPagos(planPagos);
-					 /*planPagosTemp.setAsociado(new AsociadoDTO());
-					 planPagosTemp.getAsociado().setIdAsociado(controlPago.getAsociado().getIdAsociado());
-					 planPagosTemp.setFechaCreacion(FechaUtil.obtenerFecha());
-					 planPagosTemp.setAuthToken(userName); 
-					 planPagosTemp.setAnio(anioDTO);*/
+					 if(StringUtils.isNullOrEmpty(planPagosTemp)) {
+						 planPagosTemp = new PlanPagosDTO();
+						 planPagosTemp.setAsociado(controlPago.getAsociado());
+						// planPagosTemp.getAsociado().setIdAsociado(controlPago.getAsociado().getIdAsociado());
+						 planPagosTemp.setFechaCreacion(FechaUtil.obtenerFecha());
+						 planPagosTemp.setAuthToken(userName); 
+						 planPagosTemp.setAnio(anioDTO);
+					 }
+		
 					 planPagosTemp.setPlanPagosDetPlanPagosList(planPagosDetPlanPagosList);
 					 registrarPlanPagos(planPagosTemp);
 				}
