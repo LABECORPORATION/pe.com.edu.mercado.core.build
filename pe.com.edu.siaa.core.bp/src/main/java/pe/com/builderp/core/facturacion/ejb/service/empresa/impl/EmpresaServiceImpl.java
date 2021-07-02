@@ -1069,7 +1069,7 @@ public class EmpresaServiceImpl implements EmpresaServiceLocal{
 					 planPagos.setAsociado(controlPago.getAsociado());
 					 planPagos.setAnio(anioDTO);
 					 planPagos.setIdFiltro1(anioDTO);
-					 PlanPagosDTO planPagosTemp = findByPlanPagos(planPagos);
+					 PlanPagosDTO planPagosTemp = findByPlanPagos(planPagos); 
 					 if(StringUtils.isNullOrEmpty(planPagosTemp)) {
 						 planPagosTemp = new PlanPagosDTO();
 						 planPagosTemp.setAsociado(controlPago.getAsociado());
